@@ -7,9 +7,22 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
+      - name: Download dependencies
+        run: |
+          apt-get install git build-essential python-setuptools python3-distutils python-is-python3
+
+      - name: Install Node
+        uses: actions/setup-node@v6
+        with:
+          node-version: 24
+
       - name: Clone brave-browser repo
         uses: actions/checkout@v4
         with:
           repository: brave/brave-browser
           ref: v1.84.134
+
+      - name: npm run init
+        run: |
+          npm run init
 
