@@ -22,7 +22,8 @@ jobs:
           repository: brave/brave-browser
           ref: v1.84.134
 
-      - name: npm run init
+      - name: npm install and init
         run: |
+          npm install
           npm run init
 
