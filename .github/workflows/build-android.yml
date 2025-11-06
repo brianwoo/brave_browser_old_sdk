@@ -9,7 +9,7 @@ jobs:
     steps:
       - name: Download dependencies
         run: |
-          sudo apt-get install git build-essential setuptools python-is-python3
+          sudo apt-get install git build-essential python3-dev python-is-python3
 
       - name: Install Node
         uses: actions/setup-node@v6
